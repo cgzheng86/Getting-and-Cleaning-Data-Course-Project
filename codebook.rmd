@@ -1,0 +1,107 @@
+---
+title: "codebook"
+output: html_document
+---
+
+The tidy_dataset1 contains 10299 records for both the test and training sets; for each record, there are 81 variables
+
+These data come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 'time') were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (timeBodyAcc-XYZ and timeGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
+
+Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals (timeBodyAccJerk-XYZ and timeBodyGyroJerk-XYZ). Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm (timeBodyAccMag, timeGravityAccMag, timeBodyAccJerkMag, timeBodyGyroMag, timeBodyGyroJerkMag). 
+
+Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing freqBodyAcc-XYZ, freqBodyAccJerk-XYZ, freqBodyGyro-XYZ, freqBodyAccJerkMag, freqBodyGyroMag, freqBodyGyroJerkMag. (Note the 'freq' to indicate frequency domain signals). 
+
+These signals were used to estimate variables of the feature vector for each pattern:  
+'-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
+
+The mean and standard deviation (std) of these data were shown in this dataset.
+
+For the last two variables: "subject_id" represents the identity of the person involved in the study; "activity" shows one of the six activities recorded; they are WALKING,  WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, and LAYING. 
+
+variable names:
+
+[1] "timeBodyAcc_mean_X"              
+[2] "timeBodyAcc_mean_Y"              
+[3] "timeBodyAcc_mean_Z"              
+[4] "timeGravityAcc_mean_X"           
+[5] "timeGravityAcc_mean_Y"           
+[6] "timeGravityAcc_mean_Z"           
+[7] "timeBodyAccJerk_mean_X"          
+[8] "timeBodyAccJerk_mean_Y"          
+[9] "timeBodyAccJerk_mean_Z"          
+[10] "timeBodyGyro_mean_X"             
+[11] "timeBodyGyro_mean_Y"             
+[12] "timeBodyGyro_mean_Z"             
+[13] "timeBodyGyroJerk_mean_X"         
+[14] "timeBodyGyroJerk_mean_Y"         
+[15] "timeBodyGyroJerk_mean_Z"         
+[16] "timeBodyAccMag_mean"             
+[17] "timeGravityAccMag_mean"          
+[18] "timeBodyAccJerkMag_mean"         
+[19] "timeBodyGyroMag_mean"            
+[20] "timeBodyGyroJerkMag_mean"        
+[21] "freqBodyAcc_mean_X"              
+[22] "freqBodyAcc_mean_Y"              
+[23] "freqBodyAcc_mean_Z"              
+[24] "freqBodyAcc_meanFreq_X"          
+[25] "freqBodyAcc_meanFreq_Y"          
+[26] "freqBodyAcc_meanFreq_Z"          
+[27] "freqBodyAccJerk_mean_X"          
+[28] "freqBodyAccJerk_mean_Y"          
+[29] "freqBodyAccJerk_mean_Z"          
+[30] "freqBodyAccJerk_meanFreq_X"      
+[31] "freqBodyAccJerk_meanFreq_Y"      
+[32] "freqBodyAccJerk_meanFreq_Z"      
+[33] "freqBodyGyro_mean_X"             
+[34] "freqBodyGyro_mean_Y"             
+[35] "freqBodyGyro_mean_Z"             
+[36] "freqBodyGyro_meanFreq_X"         
+[37] "freqBodyGyro_meanFreq_Y"         
+[38] "freqBodyGyro_meanFreq_Z"         
+[39] "freqBodyAccMag_mean"             
+[40] "freqBodyAccMag_meanFreq"         
+[41] "freqBodyBodyAccJerkMag_mean"     
+[42] "freqBodyBodyAccJerkMag_meanFreq" 
+[43] "freqBodyBodyGyroMag_mean"        
+[44] "freqBodyBodyGyroMag_meanFreq"    
+[45] "freqBodyBodyGyroJerkMag_mean"    
+[46] "freqBodyBodyGyroJerkMag_meanFreq"
+[47] "timeBodyAcc_std_X"               
+[48] "timeBodyAcc_std_Y"               
+[49] "timeBodyAcc_std_Z"               
+[50] "timeGravityAcc_std_X"            
+[51] "timeGravityAcc_std_Y"            
+[52] "timeGravityAcc_std_Z"            
+[53] "timeBodyAccJerk_std_X"           
+[54] "timeBodyAccJerk_std_Y"           
+[55] "timeBodyAccJerk_std_Z"           
+[56] "timeBodyGyro_std_X"              
+[57] "timeBodyGyro_std_Y"              
+[58] "timeBodyGyro_std_Z"              
+[59] "timeBodyGyroJerk_std_X"          
+[60] "timeBodyGyroJerk_std_Y"          
+[61] "timeBodyGyroJerk_std_Z"          
+[62] "timeBodyAccMag_std"              
+[63] "timeGravityAccMag_std"           
+[64] "timeBodyAccJerkMag_std"          
+[65] "timeBodyGyroMag_std"             
+[66] "timeBodyGyroJerkMag_std"         
+[67] "freqBodyAcc_std_X"               
+[68] "freqBodyAcc_std_Y"               
+[69] "freqBodyAcc_std_Z"               
+[70] "freqBodyAccJerk_std_X"           
+[71] "freqBodyAccJerk_std_Y"           
+[72] "freqBodyAccJerk_std_Z"           
+[73] "freqBodyGyro_std_X"              
+[74] "freqBodyGyro_std_Y"              
+[75] "freqBodyGyro_std_Z"              
+[76] "freqBodyAccMag_std"              
+[77] "freqBodyBodyAccJerkMag_std"      
+[78] "freqBodyBodyGyroMag_std"         
+[79] "freqBodyBodyGyroJerkMag_std"     
+[80] "subject_id"                      
+[81] "activity"           
+
+
+tidy_dataset2 uses the above variables and calculates the average of each variable from the 1st to the 79th for each subject during each actvity.
+
